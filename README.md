@@ -33,18 +33,32 @@ After completing this project, I gained strong hands-on practice in writing and 
 
 ⭐ Feel free to fork or use these queries for learning purposes.
 
-##📘 SQL Training – Day 2
-Aggregations & Business Analysis
-📌 Project Overview
 
-This project focuses on learning and practicing SQL aggregation functions and business analysis queries using a sales dataset. The goal is to understand how SQL is used in real-world reporting, dashboards, and decision-making systems.
 
-##🗂 Database Used
+# **📘 SQL Training – Day 2**
+## **Aggregations & Business Analysis**
 
-Database Name: sql_training
+---
 
-##📊 Table Structure
-Sales Table
+## **📌 Project Overview**
+
+This project focuses on learning and practicing **SQL aggregation functions** and **business analysis queries** using a sales dataset.  
+The goal is to understand how SQL is used in **real-world reporting, dashboards, and decision-making systems**.  
+By completing this project, I gained confidence in writing analytical queries and deriving insights from raw data.
+
+---
+
+## **🗂 Database Used**
+
+**Database Name:** `sql_training`
+
+---
+
+## **📊 Table Structure**
+
+### **Sales Table**
+
+```sql
 CREATE TABLE sales (
     id INT,
     product VARCHAR(50),
@@ -54,59 +68,15 @@ CREATE TABLE sales (
     revenue INT
 );
 
-##📥 Sample Data Inserted
-INSERT INTO sales VALUES
-(1, 'Laptop', 'Chennai', 'Arun', 3, 180000),
-(2, 'Mobile', 'Coimbatore', 'Ravi', 5, 75000),
-(3, 'Tablet', 'Madurai', 'Meena', 2, 40000),
-(4, 'Laptop', 'Chennai', 'Divya', 1, 60000),
-(5, 'Mobile', 'Trichy', 'Karthi', 4, 60000),
-(6, 'Laptop', 'Coimbatore', 'Ravi', 2, 120000),
-(7, 'Tablet', 'Chennai', 'Arun', 3, 60000),
-(8, 'Mobile', 'Madurai', 'Meena', 6, 90000);
+ 📈 Business Questions Solved
 
-##🎯 Concepts Covered
-
-COUNT()
-SUM()
-AVG()
-MAX() and MIN()
-GROUP BY
-
-Business Analysis Queries
-
-📈 Business Questions Solved
-
-Total number of sales transactions
-Total revenue from all sales
-Average revenue per transaction
-Revenue by region
-Revenue by product
-Sales count by salesperson
-Best selling product (by quantity)
-Region with highest revenue
-Salespeople with more than 2 sales
-Products earning more than ₹1,00,000 revenue
-
-##🛠 Tools Used
-
-MySQL
-MySQL Workbench / VS Code
-SQL
-
-##📂 Files in This Project
-sql_training/
- ├── day2_tasks.sql
- ├── schema.sql
- ├── insert_data.sql
- └── README.md
-
-🚀 Learning Outcome
-
-By completing this project, I gained hands-on experience in:
-Writing analytical SQL queries
-Generating business reports
-Understanding real-world sales data
-Applying SQL for decision making
-
-
+1.Total number of sales transactions
+2.Total revenue from all sales
+3.Average revenue per transaction
+4.Revenue by region
+5.Revenue by product
+6.Sales count by salesperson
+7.Best selling product (by quantity)
+8.Region with highest revenue
+9.Salespeople with more than 2 sales
+10.Products earning more than ₹1,00,000 revenue
