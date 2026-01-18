@@ -83,6 +83,9 @@ CREATE TABLE sales (
 9.Salespeople with more than 2 sales
 10.Products earning more than ₹1,00,000 revenue
 
+--------
+
+
 # SQL Training – Day 3  
 ## Joins & Business Analysis Project  
 
