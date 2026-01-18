@@ -69,7 +69,8 @@ CREATE TABLE sales (
 );
 
 
-**📈 Business Questions Solved**
+
+## 📈 Business Questions Solved ##
 
 1.Total number of sales transactions
 2.Total revenue from all sales
@@ -82,123 +83,91 @@ CREATE TABLE sales (
 9.Salespeople with more than 2 sales
 10.Products earning more than ₹1,00,000 revenue
 
-##**📘 SQL Training – Day 3
-Joins & Business Analysis Project
+# SQL Training – Day 3  
+## Joins & Business Analysis Project  
 
-📌 Project Overview
+## Project Overview
 
-This project focuses on learning and implementing SQL Joins and relational database concepts using multiple tables.
-The objective is to understand how real-world business databases work and how SQL is used to generate meaningful business reports by combining data from different tables.
+This project focuses on learning and implementing SQL JOIN concepts using multiple tables.
+It simulates a real-world Order Management System with customers, products, and orders.
 
-This project simulates a real sales system with customers, products, and orders.
+The objective is to understand how SQL is used for business reporting by combining data from different tables.
 
-🗂 Database Used
+---
+
+## Database Used
 
 Database Name: sql_training
 
-📊 Table Structure
+---
 
-Customers Table
+## Table Structure
 
-CREATE TABLE customers (
-    customer_id INT PRIMARY KEY,
-    customer_name VARCHAR(50),
-    city VARCHAR(50)
-);
+### Customers Table
+- customer_id  
+- customer_name  
+- city  
 
-Products Table
+### Products Table
+- product_id  
+- product_name  
+- price  
 
-CREATE TABLE products (
-    product_id INT PRIMARY KEY,
-    product_name VARCHAR(50),
-    price INT
-);
+### Orders Table
+- order_id  
+- customer_id  
+- product_id  
+- quantity  
+- order_date  
 
-Orders Table
+---
 
-CREATE TABLE orders (
-    order_id INT PRIMARY KEY,
-    customer_id INT,
-    product_id INT,
-    quantity INT,
-    order_date DATE
-);
+## Files in This Project
 
-📥 Sample Data Inserted
+- schema.sql  
+- insert_data.sql  
+- day3_tasks.sql  
+- README.md  
 
-Customers
+---
 
-INSERT INTO customers VALUES
-(1, 'Ramesh', 'Chennai'),
-(2, 'Suresh', 'Coimbatore'),
-(3, 'Priya', 'Madurai'),
-(4, 'Anitha', 'Trichy');
+## Concepts Covered
 
-Products
+- Relational Database Design  
+- Primary Key and Foreign Key  
+- INNER JOIN  
+- LEFT JOIN  
+- RIGHT JOIN  
+- Multi-table JOIN  
+- GROUP BY  
+- HAVING  
 
-INSERT INTO products VALUES
-(101, 'Laptop', 60000),
-(102, 'Mobile', 15000),
-(103, 'Tablet', 20000);
+---
 
-Orders
+## Business Questions Solved
 
-INSERT INTO orders VALUES
-(1, 1, 101, 1, '2026-01-15'),
-(2, 2, 102, 2, '2026-01-16'),
-(3, 3, 103, 1, '2026-01-17'),
-(4, 1, 102, 3, '2026-01-18'),
-(5, 4, 101, 1, '2026-01-19');
+- Show all orders with customer names  
+- Show all orders with product names  
+- Show customer name, product name, quantity, and order date  
+- Show total orders placed by each customer  
+- Show total sales amount by customer  
+- Show total quantity sold for each product  
+- Show customers who placed more than one order  
+- Show orders only from Chennai customers  
+- Show product-wise total revenue  
+- Show the highest selling product  
 
-🎯 Concepts Covered
+---
 
-Relational Database Design
-Primary Key & Foreign Key
-INNER JOIN
-LEFT JOIN
-RIGHT JOIN
-Multi-table Joins
-GROUP BY
-HAVING
-Business Reporting using SQL
+## Learning Outcome
 
-📈 Business Questions Solved
+After completing this project, I gained hands-on experience in:
+- Writing JOIN queries  
+- Designing relational databases  
+- Creating business reports  
+- Performing sales analysis  
 
-Show all orders with customer names
-Show all orders with product names
-Show customer name, product name, quantity, and order date
-Show total orders placed by each customer
-Show total sales amount by each customer
-Show total quantity sold for each product
-Show customers who placed more than one order
-Show orders only from Chennai customers
-Show product-wise total revenue
-Show the highest selling product
+---
 
-All queries were implemented using JOIN, GROUP BY, and HAVING clauses.
 
-🛠 Tools & Technologies Used
-
-MySQL
-MySQL Workbench
-Visual Studio Code
-SQL
-GitHub
-
-📂 Project Folder Structure
-
-sql_training/
-├── day3_tables.sql
-├── day3_insert.sql
-├── day3_joins.sql
-└── README.md
-
-🚀 Learning Outcome
-
-By completing this project, I gained hands-on experience in:
-
-Designing relational databases
-Writing complex JOIN queries
-Building real-world business reports
-Analyzing sales data using SQL
-Applying SQL for decision-making and reporting
+Feel free to fork or use these queries for learning purposes.
