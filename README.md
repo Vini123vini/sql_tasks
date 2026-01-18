@@ -68,7 +68,8 @@ CREATE TABLE sales (
     revenue INT
 );
 
- 📈 Business Questions Solved
+
+**📈 Business Questions Solved**
 
 1.Total number of sales transactions
 2.Total revenue from all sales
@@ -80,3 +81,124 @@ CREATE TABLE sales (
 8.Region with highest revenue
 9.Salespeople with more than 2 sales
 10.Products earning more than ₹1,00,000 revenue
+
+##**📘 SQL Training – Day 3
+Joins & Business Analysis Project
+
+📌 Project Overview
+
+This project focuses on learning and implementing SQL Joins and relational database concepts using multiple tables.
+The objective is to understand how real-world business databases work and how SQL is used to generate meaningful business reports by combining data from different tables.
+
+This project simulates a real sales system with customers, products, and orders.
+
+🗂 Database Used
+
+Database Name: sql_training
+
+📊 Table Structure
+
+Customers Table
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(50),
+    city VARCHAR(50)
+);
+
+Products Table
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(50),
+    price INT
+);
+
+Orders Table
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    order_date DATE
+);
+
+📥 Sample Data Inserted
+
+Customers
+
+INSERT INTO customers VALUES
+(1, 'Ramesh', 'Chennai'),
+(2, 'Suresh', 'Coimbatore'),
+(3, 'Priya', 'Madurai'),
+(4, 'Anitha', 'Trichy');
+
+Products
+
+INSERT INTO products VALUES
+(101, 'Laptop', 60000),
+(102, 'Mobile', 15000),
+(103, 'Tablet', 20000);
+
+Orders
+
+INSERT INTO orders VALUES
+(1, 1, 101, 1, '2026-01-15'),
+(2, 2, 102, 2, '2026-01-16'),
+(3, 3, 103, 1, '2026-01-17'),
+(4, 1, 102, 3, '2026-01-18'),
+(5, 4, 101, 1, '2026-01-19');
+
+🎯 Concepts Covered
+
+Relational Database Design
+Primary Key & Foreign Key
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+Multi-table Joins
+GROUP BY
+HAVING
+Business Reporting using SQL
+
+📈 Business Questions Solved
+
+Show all orders with customer names
+Show all orders with product names
+Show customer name, product name, quantity, and order date
+Show total orders placed by each customer
+Show total sales amount by each customer
+Show total quantity sold for each product
+Show customers who placed more than one order
+Show orders only from Chennai customers
+Show product-wise total revenue
+Show the highest selling product
+
+All queries were implemented using JOIN, GROUP BY, and HAVING clauses.
+
+🛠 Tools & Technologies Used
+
+MySQL
+MySQL Workbench
+Visual Studio Code
+SQL
+GitHub
+
+📂 Project Folder Structure
+
+sql_training/
+├── day3_tables.sql
+├── day3_insert.sql
+├── day3_joins.sql
+└── README.md
+
+🚀 Learning Outcome
+
+By completing this project, I gained hands-on experience in:
+
+Designing relational databases
+Writing complex JOIN queries
+Building real-world business reports
+Analyzing sales data using SQL
+Applying SQL for decision-making and reporting
