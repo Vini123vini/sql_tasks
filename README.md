@@ -167,7 +167,80 @@ Database Name: sql_training
 After completing this project, I gained hands-on experience in:
 - Writing JOIN queries  
 - Designing relational databases  
-- Creating business reports  
+- Creating business reports
+
+-- SQL Training – Day 4=--  
+## Subqueries & Advanced Filtering Project  
+
+## Project Overview
+
+This project focuses on practicing SQL Subqueries using an Order Management dataset.
+The goal is to understand how to solve real-world business problems using nested queries and advanced filtering.
+
+---
+
+## Database Used
+
+Database Name: sql_training
+
+---
+
+## Tables Used
+
+### Clients Table
+- client_id
+- client_name
+- city
+
+### Items Table
+- item_id
+- item_name
+- price
+
+### Delivery Table
+- sale_id
+- client_id
+- item_id
+- quantity
+- sale_date
+- total_price
+---
+
+## Concepts Covered
+
+- Subqueries (Nested Queries)
+- IN and NOT IN
+- MAX(), MIN(), AVG()
+- Filtering using subquery results
+- Subqueries with JOIN (Real-world reporting)
+
+---
+
+## Task Questions Solved
+
+- Find the item with highest price  
+- Find the item with lowest price  
+- Find deliveries with quantity greater than average quantity  
+- Find the client who spent the highest amount  
+- Find clients who bought a specific item (TV)  
+- Find clients who bought more than one item  
+- Find items that were never sold  
+- Find clients who never made any purchase  
+- Find delivery with maximum quantity  
+- Find the city of the client who spent the most money  
+
+---
+
+## Learning Outcome
+
+After completing this project, I gained strong hands-on practice in:
+- Writing SQL Subqueries for real-time business problems  
+- Working with relational tables using IDs  
+- Generating meaningful insights from sales data  
+- Improving query logic and problem-solving skills  
+
+⭐ Feel free to fork or use these queries for learning purposes.
+
 - Performing sales analysis  
 
 ---
