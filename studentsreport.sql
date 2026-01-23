@@ -175,3 +175,41 @@ join items i on d.item_id=i.item_id
 group by i.item_name
 order by total_sold  desc
 limit 1;
+--DAY4---
+USE sql_practicing;
+
+select*from items where price = (select max(price) from items);
+
+select*from items where price=(select min(price)from items);
+
+select*from delivery where quantity >(select avg(quantity) from delivery);
+
+select client_id from delivery where total_price=(select max(total_price)from delivery);
+
+select*from clients where client_id in(SELECT client_id from delivery where item_id=(select item_id from items where item_name='TV'));
+
+select *from clients where client_id in(select client_id from delivery where quantity= (select quantity from delivery where quantity > 1));
+
+select*from items where item_id not in (select item_id from delivery);
+
+insert into clients values(4,'arjun','Delhi');
+
+insert into items values (204,'AC',89000);
+
+select client_name from clients where client_id  not in(select client_id from delivery);
+
+select* from delivery  where quantity = (select max(quantity)from delivery);
+
+SELECT c.client_name, i.item_name, d.quantity, d.sale_date
+FROM delivery d
+JOIN clients c ON d.client_id = c.client_id
+JOIN items i ON d.item_id = i.item_id
+WHERE d.quantity = (SELECT MAX(quantity) FROM delivery);
+
+SELECT city
+FROM clients
+WHERE client_id = (
+    SELECT client_id
+    FROM delivery
+    WHERE total_price = (SELECT MAX(total_price) FROM delivery)
+);
