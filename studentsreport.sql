@@ -213,3 +213,89 @@ WHERE client_id = (
     FROM delivery
     WHERE total_price = (SELECT MAX(total_price) FROM delivery)
 );
+--day5--
+CREATE DATABASE library_db;
+USE library_db;
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50),
+    department VARCHAR(50)
+);
+CREATE TABLE books (
+    book_id INT PRIMARY KEY,
+    book_name VARCHAR(50),
+    author VARCHAR(50),
+    price INT
+);
+
+CREATE TABLE borrow (
+    borrow_id INT PRIMARY KEY,
+    student_id INT,
+    book_id INT,
+    borrow_date DATE
+);
+INSERT INTO students VALUES
+(1, 'Arun', 'CSE'),
+(2, 'Meena', 'ECE'),
+(3, 'Karthik', 'MECH');
+INSERT INTO books VALUES
+(101, 'SQL Basics', 'John', 500),
+(102, 'Python Guide', 'Alex', 700),
+(103, 'Data Science', 'Smith', 900);
+
+INSERT INTO borrow VALUES
+(1, 1, 101, '2026-01-01'),
+(2, 2, 102, '2026-01-02'),
+(3, 1, 103, '2026-01-03');
+
+select s.student_name,b.book_name
+from borrow br
+join students s on br.student_id= s.student_id
+join books b on br.book_id = b.book_id;
+
+select student_name from students where student_id in (select student_id from borrow where book_id=101);
+
+select book_name from books order by price  desc limit 1;
+
+select s.student_name from students s
+join borrow br on br.student_id=s.student_id
+join books b on br.book_id=b.book_id;
+
+SELECT s.student_name, b.book_name
+FROM students s
+LEFT JOIN borrow br ON s.student_id = br.student_id
+LEFT JOIN books b ON br.book_id = b.book_id;
+
+SELECT s.student_name, b.book_name
+FROM students s
+RIGHT JOIN borrow br ON s.student_id = br.student_id
+RIGHT JOIN books b ON br.book_id = b.book_id;
+
+SELECT s.student_name
+FROM students s
+LEFT JOIN borrow br ON s.student_id = br.student_id
+WHERE br.student_id IS NULL;
+
+select s.student_name,count(br.book_id) as Total_Books
+from students s
+left join borrow br on s.student_id = br.student_id
+group by student_name;
+
+SELECT s.student_name
+FROM students s
+JOIN borrow br ON s.student_id = br.student_id
+JOIN books b ON br.book_id = b.book_id
+WHERE b.book_name = 'Data Science';
+
+select s.student_name,count(br.book_id)as  Total_Books
+from students s
+join borrow br on s.student_id = br.student_id
+group by s.student_name
+having count(br.book_id) > 2;
+
+SELECT s.student_name, COUNT(br.book_id) AS total_books
+FROM students s
+JOIN borrow br ON s.student_id = br.student_id
+GROUP BY s.student_name
+HAVING COUNT(br.book_id) > 1;
