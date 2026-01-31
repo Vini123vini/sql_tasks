@@ -246,4 +246,75 @@ After completing this project, I gained strong hands-on practice in:
 ---
 
 
-Feel free to fork or use these queries for learning purposes.
+Feel free to fork or use these queries for learning purposes
+
+--day 5--
+📘 SQL Training – JOINs Practice Project
+
+This repository contains SQL practice queries focused on JOIN operations using a simple library-style database.
+The project helps in understanding how real-world relational databases work by combining data from multiple tables.
+
+📌 Project Overview
+
+In this project, I practiced different types of SQL JOINs to retrieve meaningful insights from related tables such as students, books, and borrow records.
+The goal was to strengthen practical SQL skills used in data analysis and reporting.
+
+🗂 Database Used
+
+Database Name: sql_training
+
+📊 Table Structures
+Students Table
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(50)
+);
+
+Books Table
+CREATE TABLE books (
+    book_id INT PRIMARY KEY,
+    book_name VARCHAR(50),
+    author VARCHAR(50),
+    price INT
+);
+
+Borrow Table
+CREATE TABLE borrow (
+    borrow_id INT PRIMARY KEY,
+    student_id INT,
+    book_id INT
+);
+
+🎯 Concepts Covered
+
+Relational Database Design
+
+Primary Key & Foreign Key
+
+INNER JOIN
+
+LEFT JOIN
+
+RIGHT JOIN
+
+JOIN with GROUP BY
+
+JOIN with HAVING
+
+Business-style query logic
+
+📈 Queries Practiced
+
+Show student names and books borrowed
+
+Show all students including those who didn’t borrow books
+
+Find students who never borrowed any book
+
+Count total books borrowed by each student
+
+Find students who borrowed more than one book
+
+Identify most borrowed books
+
+Generate combined student–book reports
